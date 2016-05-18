@@ -1,5 +1,7 @@
 # SamuBrain
 
+This repository was forked from the original GitHub SamuMovie repository.
+
 ## SamuBrain, exp. 4, cognitive mental organs: MPU (Mental Processing Unit), acquiring higher-order knowledge
 
 Currently I am working on a manuscript titled "Samu in His Prenatal Development" where I want to establish a definition of a mathematical machine for learning. It is for this reason that I have made various experiments on the subject.
