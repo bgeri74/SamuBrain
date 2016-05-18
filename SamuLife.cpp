@@ -53,8 +53,11 @@
 
 SamuLife::SamuLife ( int w, int h, QWidget *parent ) : QMainWindow ( parent )
 {
+  w = 160;
+  h = 90;
   setWindowTitle ( "SamuBrain, exp. 4, cognitive mental organs: MPU (Mental Processing Unit), COP-based Q-learning, acquiring higher-order knowledge" );
   setFixedSize ( QSize ( 2*w*m_cw, 2*h*m_ch ) );
+  
 
   gameOfLife = new GameOfLife ( w, h );
   gameOfLife->start();
@@ -96,6 +99,16 @@ void SamuLife::paintEvent ( QPaintEvent* )
               else if ( lattice[i][j] == 4 )
                 qpainter.fillRect ( j*m_cw, i*m_ch,
                                     m_cw, m_ch, Qt::magenta );
+		// ----------------- Módosítások
+		else if ( lattice[i][j] == 5 )
+                qpainter.fillRect ( j*m_cw, i*m_ch,
+                                    m_cw, m_ch, Qt::yellow );
+		else if ( lattice[i][j] == 6 )
+                qpainter.fillRect ( j*m_cw, i*m_ch,
+                                    m_cw, m_ch, Qt::black );
+		else if ( lattice[i][j] == 7 )
+                qpainter.fillRect ( j*m_cw, i*m_ch,
+                                    m_cw, m_ch, Qt::cyan );
               else
                 qpainter.fillRect ( j*m_cw, i*m_ch,
                                     m_cw, m_ch, Qt::white );

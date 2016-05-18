@@ -8,8 +8,12 @@ DEFINES += Q_LOOKUP_TABLE
 
 QT += widgets core
 CONFIG += c++14
-QMAKE_CXXFLAGS += -fopenmp
+CONFIG += c++11
+QMAKE_CXXFLAGS += -fopenmp `pkg-config --cflags opencv` `pkg-config --libs opencv` 
+QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CXXFLAGS += -std=c++1y
 LIBS += -fopenmp
+LIBS += `pkg-config --libs opencv`
 
 TEMPLATE = app
 TARGET = SamuBrain
